@@ -3,14 +3,13 @@ const mongoose = require('mongoose')
 const cookieParser = require('cookie-parser')
 const cors = require('cors')
 
-
-
+require('dotenv').config();
 
 
 // create a database connection -> 
 // it can be use different file and import 
 
-mongoose.connect('mongodb+srv://mollahbusiness23_db_user:m75iCXQpUPOroGZE@e-commerce.8479znm.mongodb.net/')
+mongoose.connect(process.env.MONGODB_URI)
 .then(() => console.log('mongodb connected'))
 .catch((error)=>{console.log('Mongodb Connectin error',error);})
 
