@@ -15,9 +15,7 @@ const AdminLayout = () => {
                 <main className='flex-1 bg-muted/40 flex md:p-6'>
                     <Outlet></Outlet>
                 </main>
-
             </div>
-
         </div>
     );
 };
